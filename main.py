@@ -3,13 +3,16 @@
 import requests
 import random
 from bot import bot_token, chat_id
-from bijna import bijna
-from nu import nu
+from almost import almost
+from now import now
+
+almost = (random.choice(almost))
+now = (random.choice(now))
 
 print("Testing the bot")
+print("Almost = ", almost)
+print("Now = ", now)
 
-bijna = (random.choice(bijna))
-nu = (random.choice(nu))
 
 def telegram_bot_sendtext(bot_message):
     bot_message = bot_message.replace("_", "\_")
@@ -19,6 +22,6 @@ def telegram_bot_sendtext(bot_message):
     return response.json()
 
 
-telegram_bot_sendtext(bijna)
+telegram_bot_sendtext(almost)
 
-telegram_bot_sendtext(nu)
+telegram_bot_sendtext(now)
